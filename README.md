@@ -30,3 +30,10 @@ flask run
 ```
 
 The app should running on [http://127.0.0.1:5000](http://127.0.0.1:5000/)
+
+## Aditional
+To test send email for debugging server
+```bash
+python -m smtpd -n -c DebuggingServer localhost:8025
+```
+This is a fake email server that accepts emails, but instead of sending them, it prints them to the console.
