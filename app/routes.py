@@ -5,7 +5,7 @@ from flask import render_template, flash, redirect, url_for, request
 from flask_login import current_user, login_user, logout_user, login_required
 
 from app.forms import LoginForm, RegistrationForm, EditProfileForm, PostForm
-from app.models import User
+from app.models import User, Post
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
@@ -19,16 +19,7 @@ def index():
         flash('Your post is now live!')
         return redirect(url_for('index'))
 
-    posts = [
-        {
-            'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
-        },
-        {
-            'author': {'username': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
-        }
-    ]
+    posts = current_user.followed_posts().all()
     return render_template("index.html", title='Home Page', form=form, posts=posts)
 
 
