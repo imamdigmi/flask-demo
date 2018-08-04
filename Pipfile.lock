@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "4813ffeb7c849f6d9ba991f855e3b81a678746f16e5c2194f092cdec9091ac90"
+            "sha256": "31fd8efd10861edb8b86dfab35ae9fc2ad3fff2ec15e9aef3e03c377a59fe5d5"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -22,6 +22,13 @@
                 "sha256:eb7db9b4510562ec37c91d00b00d95fde076c1030d3f661aea882eec532b3565"
             ],
             "version": "==1.0.0"
+        },
+        "babel": {
+            "hashes": [
+                "sha256:6778d85147d5d85345c14a26aada5e478ab04e39b078b0745ee6870c2b5cf669",
+                "sha256:8cba50f48c529ca3fa18cf81fa9403be176d374ac4d60738b839122dfaaa3d23"
+            ],
+            "version": "==2.6.0"
         },
         "blinker": {
             "hashes": [
@@ -49,6 +56,14 @@
             ],
             "index": "pypi",
             "version": "==1.0.2"
+        },
+        "flask-babel": {
+            "hashes": [
+                "sha256:462a3c599b0ccf426ca1757cc612f1db383844efd346d14170da04c8c76dd521",
+                "sha256:c0d75710bd4b0fe866f9f2347de6e19208712f9cec006436b4c1c15d4cb0c939"
+            ],
+            "index": "pypi",
+            "version": "==0.11.2"
         },
         "flask-bootstrap": {
             "hashes": [
@@ -148,6 +163,13 @@
                 "sha256:a3c066acee22a1c94f63938341d4fb374e3fdd69366ed6603d7b24bed1efc565"
             ],
             "version": "==1.0.3"
+        },
+        "pytz": {
+            "hashes": [
+                "sha256:a061aa0a9e06881eb8b3b2b43f05b9439d6583c206d0a6c340ff72a7b6669053",
+                "sha256:ffb9ef1de172603304d9d2819af6f5ece76f2e85ec10692a524dd876e72bf277"
+            ],
+            "version": "==2018.5"
         },
         "six": {
             "hashes": [
