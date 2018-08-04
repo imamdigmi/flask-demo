@@ -17,6 +17,8 @@ pyjwt = "*"
 flask-bootstrap = "*"
 flask-moment = "*"
 flask-babel = "*"
+guess-language-spirit = "*"
+requests = "*"
 
 [requires]
 python_version = "3.6"
