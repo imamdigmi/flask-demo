@@ -8,7 +8,18 @@ class Config(object):
     FLASK_DEBUG = os.environ.get('DEBUG')
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
 
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'app.db')
+    if os.environ.get('DATABASE_TYPE').lower() == 'mysql':
+        _DATABASE = 'mysql+pymysql://{user}:{password}@{host}:{port}/{database}'.format(
+            user=os.environ.get('DATABASE_USER'),
+            password=os.environ.get('DATABASE_PASSWORD'),
+            host=os.environ.get('DATABASE_HOST'),
+            port=os.environ.get('DATABASE_PORT'),
+            database=os.environ.get('DATABASE_NAME')
+            )
+    elif os.environ.get('DATABASE_TYPE').lower() == 'sqlite':
+        _DATABASE = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'app.db')
+
+    SQLALCHEMY_DATABASE_URI = _DATABASE
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     MAIL_SERVER = os.environ.get('MAIL_SERVER')
